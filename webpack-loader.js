@@ -1,3 +1,5 @@
+// @flow
+
 /**
  * Webpack Loaders
  *
@@ -8,7 +10,6 @@
  * css-loader
  * style-loader
  */
-
 
 const loaderBabel = {
     test: /.jsx?$/,
