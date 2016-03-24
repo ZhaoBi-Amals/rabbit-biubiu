@@ -22,13 +22,17 @@
 * mongoDB
 * ???
 
+阶段目标:
+
+* [] Hello world 完成基础设施建设
+
 Todos:
 
-* react HMR
-* relay
-* react native supports
-* testing
-* redux 
-* react-router
-* nodejs
+* [] react HMR
+* [] relay
+* [] react native supports
+* [] testing
+* [] redux 
+* [] react-router
+* [] nodejs
 
