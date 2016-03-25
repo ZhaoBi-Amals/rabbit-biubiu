@@ -1,10 +1,13 @@
-'use strict';
+import { app, BrowserWindow } from 'electron'
 
-const electron = require('electron');
-// Module to control application life.
-const app = electron.app;
-// Module to create native browser window.
-const BrowserWindow = electron.BrowserWindow;
+/**
+ * Electron App Builder.
+ *
+ * 用 Electron 打包资源, 这只是一个pre-builder.
+ *
+ * @link [electron](http://electron.atom.io/)
+ * @author Rabbit
+ */
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -49,3 +52,5 @@ app.on('activate', function () {
     createWindow();
   }
 });
+
+console.log(2)

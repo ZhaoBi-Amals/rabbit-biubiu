@@ -17,6 +17,7 @@
 * react-native
 * election
 * sass
+* stylus
 * flow
 * nodejs
 * mongoDB
