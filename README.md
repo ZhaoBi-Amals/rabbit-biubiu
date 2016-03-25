@@ -4,7 +4,7 @@
 **亲手搭建的vue项目包括了vue-loader webpack babel RMH等功能**
 
 ### 使用方法
-```bash
+``` bash
   npm i 
   npm i -g webpack
   npm i -g webpack-dev-server
