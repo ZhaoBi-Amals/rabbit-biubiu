@@ -1,13 +1,13 @@
-import { app, BrowserWindow } from 'electron'
+//'use strict';
+console.log(__dirname)
 
-/**
- * Electron App Builder.
- *
- * 用 Electron 打包资源, 这只是一个pre-builder.
- *
- * @link [electron](http://electron.atom.io/)
- * @author Rabbit
- */
+//import electron from 'electron'
+
+const electron = require('electron');
+// Module to control application life.
+const app = electron.app;
+// Module to create native browser window.
+const BrowserWindow = electron.BrowserWindow;
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -18,7 +18,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({width: 800, height: 600});
 
   // and load the index.html of the app.
-  mainWindow.loadURL('file://' + __dirname + '/../index.html');
+  mainWindow.loadURL('file://' + __dirname + '/index.html');
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
