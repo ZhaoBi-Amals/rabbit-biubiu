@@ -1,7 +1,7 @@
 # rabbit-biubiu
 # 最炫酷的前端技术集合-vue
 
-**亲手搭建的vue项目包括了vue-loader webpack babel RMH等功能**
+亲手搭建的vue项目包括了**vue-loader, webpack, babel, RMH**等功能
 
 ### 使用方法
 ``` bash
