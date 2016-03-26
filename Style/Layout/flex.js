@@ -1,7 +1,7 @@
 /* @flow */
 
 /**
- * Flex Layout 
+ * Flex Layout
  *
  * 弹性盒子布局模型
  *
@@ -25,7 +25,7 @@
  *   justify-content: center;
  *   align-items: center;
  * }
- * 
+ *
  * 当然，我们还可以对每个子元素设定自己的行为。这里常用的就是`flex`
  * 这个属性。`flex`也是个组合属性，由`flex-grow`，`flex-shrink`，
  * `flex-basic`组成，分别代表了生长，收缩与基本尺寸。常用方式如下。
@@ -65,7 +65,7 @@ type Direction =
 
 type Wrapper =
     | 'wrap'
-    | 'no-wrap'
+    | 'nowrap'
     | 'wrap-reverse'
 
 type Position =
@@ -84,7 +84,7 @@ type Position =
 const DefaultDirection: Direction  = 'row'
 const DefaultStart:     Position   = 'flex-start'
 const DefaultStretch:   Position   = 'stretch'
-const DefaultWrap:      Wrapper    = 'no-wrap'
+const DefaultWrap:      Wrapper    = 'nowrap'
 
 
 /**
@@ -104,10 +104,11 @@ function defineWrap(wrap: Wrapper = DefaultWrap) {
 }
 
 function defineFlow(options = { direction: DefaultDirection,
-				wrap: DefaultWrap }) {
+				                        wrap: DefaultWrap }) {
     let ddirection = defineDirection(options.direction)
     let ddwrap     = defineWrap(options.wrap)
-    return { 'flexFlow': `${ddirection['flex-direction']} ${ddwrap['flex-wrap']}` }
+    console.log(ddirection)
+    return { 'flexFlow': `${ddirection['flexDirection']} ${ddwrap['flexWrap']}` }
 }
 
 function defineJustifyContent(position: Position = DefaultStart) {
@@ -119,25 +120,26 @@ function defineAlianItems(position: Position = DefaultStretch) {
 }
 
 function constFlex(options = { direction: DefaultDirection,
-			       wrap: DefaultWrap,
-			       justifyContent: DefaultStart,
-			       alignItems: DefaultStretch }) {
+			                         wrap: DefaultWrap,
+			                         justifyContent: DefaultStart,
+			                         alignItems: DefaultStretch }) {
 
     return Object.assign({},
                          defineContainer(),
-                         defineFlow(options.direction, options.wrap),
+                         defineFlow({ direction: options.direction,
+                                      wrap: options.wrap}),
                          defineJustifyContent(options.justifyContent),
                          defineAlianItems(options.alignItems))
 }
 
 function constFlexItem(options = { grow: 1,
-				   basic: 'auto' }) {
+				                           basic: 'auto' }) {
     return { 'flex': `${options.grow} 1 ${options.basic}` }
 }
 
 
-/** 
- * Exports 
+/**
+ * Exports
  */
 
 export function flex() {
@@ -146,11 +148,12 @@ export function flex() {
 
 export function flexCenter() {
     return constFlex({ justifyContent: 'center',
-		       alignItems: 'center' })
+		                   alignItems: 'center' })
 }
 
 export function flexCenterStart() {
-    return constFlex({ justifyContent: 'center' })
+    return constFlex({ justifyContent: 'flex-start',
+                       alignItems: 'center'})
 }
 
 export function flexStart() {
@@ -159,9 +162,21 @@ export function flexStart() {
 
 export function flexItem(basic) {
     return constFlexItem({ grow: 0,
-			   basic: basic })
+			                     basic: basic })
 }
 
 export function flexItemGrow() {
     return constFlexItem()
+}
+
+
+export function flexColumnCenter() {
+    return constFlex({ justifyContent: 'center',
+		                   alignItems: 'center',
+                       direction: 'column' })
+}
+
+export function flexColumnCenterStart() {
+    return constFlex({ justifyContent: 'center',
+                       direction: 'column' })
 }
