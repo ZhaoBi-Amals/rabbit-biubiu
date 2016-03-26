@@ -1,5 +1,9 @@
 # How Fast Is Fast ? （Just Play）
 
+[x] write once run anywhere
+[x] write less do  more
+
+
 这个项目的目的在于讨论如何更快更好的构建项目，主要是如下方面的讨论：
 
 * Templates 构建初始化模板
@@ -25,15 +29,19 @@
 
 阶段目标:
 
-* [] Hello world 完成基础设施建设
+* [ ] Hello world 完成基础设施建设
+
+编码规范:
+
+* 注释每行40字
 
 Todos:
 
-* [] react HMR
-* [] relay
-* [] react native supports
-* [] testing
-* [] redux 
-* [] react-router
-* [] nodejs
+* [ ] react HMR
+* [ ] relay
+* [ ] react native supports
+* [ ] testing
+* [ ] redux 
+* [ ] react-router
+* [ ] nodejs
 
