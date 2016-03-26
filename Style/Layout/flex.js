@@ -95,27 +95,27 @@ function defineContainer() {
 }
 
 function defineDirection(direction: Direction = DefaultDirection) {
-    return { 'flex-direction': direction }
+    return { 'flexDirection': direction }
 }
 
 
 function defineWrap(wrap: Wrapper = DefaultWrap) {
-    return { 'flex-wrap': wrap }
+    return { 'flexWrap': wrap }
 }
 
 function defineFlow(options = { direction: DefaultDirection,
 				wrap: DefaultWrap }) {
     let ddirection = defineDirection(options.direction)
     let ddwrap     = defineWrap(options.wrap)
-    return { 'flex-flow': `${ddirection['flex-direction']} ${ddwrap['flex-wrap']}` }
+    return { 'flexFlow': `${ddirection['flex-direction']} ${ddwrap['flex-wrap']}` }
 }
 
 function defineJustifyContent(position: Position = DefaultStart) {
-    return { 'justify-content': position }
+    return { 'justifyContent': position }
 }
 
 function defineAlianItems(position: Position = DefaultStretch) {
-    return { 'align-items': position }
+    return { 'alignItems': position }
 }
 
 function constFlex(options = { direction: DefaultDirection,
@@ -128,6 +128,11 @@ function constFlex(options = { direction: DefaultDirection,
                          defineFlow(options.direction, options.wrap),
                          defineJustifyContent(options.justifyContent),
                          defineAlianItems(options.alignItems))
+}
+
+function constFlexItem(options = { grow: 1,
+				   basic: 'auto' }) {
+    return { 'flex': `${options.grow} 1 ${options.basic}` }
 }
 
 
@@ -150,4 +155,13 @@ export function flexCenterStart() {
 
 export function flexStart() {
     return constFlex({ alignItems: 'center' })
+}
+
+export function flexItem(basic) {
+    return constFlexItem({ grow: 0,
+			   basic: basic })
+}
+
+export function flexItemGrow() {
+    return constFlexItem()
 }
