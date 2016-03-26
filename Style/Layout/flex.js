@@ -3,22 +3,22 @@
 /**
  * Flex Layout 
  *
- * µ¯ĞÔºĞ×Ó²¼¾ÖÄ£ĞÍ
+ * å¼¹æ€§ç›’å­å¸ƒå±€æ¨¡å‹
  *
- * ³ı´«Í³floatºÍinline-blockÒÔÍâµÄÓÖÒ»²¼¾ÖÀûÆ÷£¬¼òµ¥Ò×ÓÃ¡£ÓÅµãÊÇ¼ò
- * µ¥Ö±¹Û£¬¿ÉÒÔÊµÏÖ¸÷ÖÖ²¼¾ÖÄÑÌâ£¬ÈçË®Æ½¾ÓÖĞ£¬´¹Ö±¾ÓÖĞµÈ£»È±µãÊÇ¼æÈİ
- * ĞÔÎÊÌâ£¬ĞèÒªÖ§³ÖIE10+¡£ËùÒÔÍÆ¼öÔÚ¼æÈİĞÔÒªÇó²»¸ßµÄµØ·½Ê¹ÓÃ£¬Èëºó
- * Ì¨¹ÜÀíÏµÍ³£¬mobile¶Ë¡£
+ * é™¤ä¼ ç»Ÿfloatå’Œinline-blockä»¥å¤–çš„åˆä¸€å¸ƒå±€åˆ©å™¨ï¼Œç®€å•æ˜“ç”¨ã€‚ä¼˜ç‚¹æ˜¯ç®€
+ * å•ç›´è§‚ï¼Œå¯ä»¥å®ç°å„ç§å¸ƒå±€éš¾é¢˜ï¼Œå¦‚æ°´å¹³å±…ä¸­ï¼Œå‚ç›´å±…ä¸­ç­‰ï¼›ç¼ºç‚¹æ˜¯å…¼å®¹
+ * æ€§é—®é¢˜ï¼Œéœ€è¦æ”¯æŒIE10+ã€‚æ‰€ä»¥æ¨èåœ¨å…¼å®¹æ€§è¦æ±‚ä¸é«˜çš„åœ°æ–¹ä½¿ç”¨ï¼Œå…¥å
+ * å°ç®¡ç†ç³»ç»Ÿï¼Œmobileç«¯ã€‚
  *
- * ¼òµ¥Ê¹ÓÃ£¬Ö»ĞèÒªÔÚ¸øÈİÆ÷¶¨Òå`display: flex`¾Í¿ÉÒÔÁË¡£Ò»°ãÀ´ËµÏÂ
- * Ãæ3¸öÊôĞÔ±È½Ï³£ÓÃ£º
+ * ç®€å•ä½¿ç”¨ï¼Œåªéœ€è¦åœ¨ç»™å®¹å™¨å®šä¹‰`display: flex`å°±å¯ä»¥äº†ã€‚ä¸€èˆ¬æ¥è¯´ä¸‹
+ * é¢3ä¸ªå±æ€§æ¯”è¾ƒå¸¸ç”¨ï¼š
  *
- * 1. justify-content Ö÷ÖáÎ»ÖÃµÄÅÅÁĞ·½Ê½
- * 2. align-items ÈİÆ÷ÄÚ×ÓÔªËØµÄÅÅÁĞ·½Ê½
- * 3. flex-flow ÕâÊÇ¸ö×éºÏÊôĞÔ£¬×éºÏÁË`flex-direction`
- *    ºÍ`flex-wrap`£¬Ç°ÕßÉè¶¨Ö÷ÖáÊÇx»¹ÊÇy£¬ºóÕßÉè¶¨°ü¹ü·½Ê½
+ * 1. justify-content ä¸»è½´ä½ç½®çš„æ’åˆ—æ–¹å¼
+ * 2. align-items å®¹å™¨å†…å­å…ƒç´ çš„æ’åˆ—æ–¹å¼
+ * 3. flex-flow è¿™æ˜¯ä¸ªç»„åˆå±æ€§ï¼Œç»„åˆäº†`flex-direction`
+ *    å’Œ`flex-wrap`ï¼Œå‰è€…è®¾å®šä¸»è½´æ˜¯xè¿˜æ˜¯yï¼Œåè€…è®¾å®šåŒ…è£¹æ–¹å¼
  *
- * Èç´¹Ö±¾ÓÖĞ:
+ * å¦‚å‚ç›´å±…ä¸­:
  * ```css
  * .con {
  *   display: flex;
@@ -26,26 +26,26 @@
  *   align-items: center;
  * }
  * 
- * µ±È»£¬ÎÒÃÇ»¹¿ÉÒÔ¶ÔÃ¿¸ö×ÓÔªËØÉè¶¨×Ô¼ºµÄĞĞÎª¡£ÕâÀï³£ÓÃµÄ¾ÍÊÇ`flex`
- * Õâ¸öÊôĞÔ¡£`flex`Ò²ÊÇ¸ö×éºÏÊôĞÔ£¬ÓÉ`flex-grow`£¬`flex-shrink`£¬
- * `flex-basic`×é³É£¬·Ö±ğ´ú±íÁËÉú³¤£¬ÊÕËõÓë»ù±¾³ß´ç¡£³£ÓÃ·½Ê½ÈçÏÂ¡£
+ * å½“ç„¶ï¼Œæˆ‘ä»¬è¿˜å¯ä»¥å¯¹æ¯ä¸ªå­å…ƒç´ è®¾å®šè‡ªå·±çš„è¡Œä¸ºã€‚è¿™é‡Œå¸¸ç”¨çš„å°±æ˜¯`flex`
+ * è¿™ä¸ªå±æ€§ã€‚`flex`ä¹Ÿæ˜¯ä¸ªç»„åˆå±æ€§ï¼Œç”±`flex-grow`ï¼Œ`flex-shrink`ï¼Œ
+ * `flex-basic`ç»„æˆï¼Œåˆ†åˆ«ä»£è¡¨äº†ç”Ÿé•¿ï¼Œæ”¶ç¼©ä¸åŸºæœ¬å°ºå¯¸ã€‚å¸¸ç”¨æ–¹å¼å¦‚ä¸‹ã€‚
  *
- * Ã¿¸ö×ÓÔªËØ³ß´çÆ½¾ù:
+ * æ¯ä¸ªå­å…ƒç´ å°ºå¯¸å¹³å‡:
  * ```css
  * .items {
  *   flex: 1 1 auto;
  * }
  *
- * ÈİÆ÷¿í¶È²»¶¨£¬Èı¸öÔªËØ£¬×ó±ß10px£¬ÓÒ±ß20px£¬ÖĞ¼ä²¿·Ö¿í¶È
- * ËæÈİÆ÷¿í¶È×ÔÓÉÉìËõ:
+ * å®¹å™¨å®½åº¦ä¸å®šï¼Œä¸‰ä¸ªå…ƒç´ ï¼Œå·¦è¾¹10pxï¼Œå³è¾¹20pxï¼Œä¸­é—´éƒ¨åˆ†å®½åº¦éšå®¹å™¨å®½
+ * åº¦è‡ªç”±ä¼¸ç¼©:
  * .items1 { flex: 0 1 10px; }
- * .items3 { flex: 0 1 20px; }
  * .items2 { flex: 1 1 auto; }
+ * .items3 { flex: 0 1 20px; }
  *
  *
- * ÎÄÏ××ÊÁÏ
+ * æ–‡çŒ®èµ„æ–™
  * 1. [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
- * 2. [MDN ÖĞÎÄÒë°æ](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
+ * 2. [MDN ä¸­æ–‡è¯‘ç‰ˆ](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
  * 3. [Flex demo](http://demo.agektmr.com/flexbox/)
  * 4. [Flexyboxes](http://the-echoplex.net/flexyboxes/)
  * 5. [css Reference](http://tympanus.net/codrops/css_reference/flexbox/)
@@ -53,6 +53,10 @@
  */
 
 
+
+/**
+ * Types
+ */
 type Direction =
     | 'row'
     | 'row-reverse'
@@ -74,12 +78,18 @@ type Position =
     | 'stretch'
 
 
+/**
+ * Default value
+ */
 const DefaultDirection: Direction  = 'row'
 const DefaultStart:     Position   = 'flex-start'
 const DefaultStretch:   Position   = 'stretch'
-const DefaultWrap:      Wrapper    = 'wrap'
+const DefaultWrap:      Wrapper    = 'no-wrap'
 
 
+/**
+ * Constructor
+ */
 function defineContainer() {
     return { 'display': 'flex' }
 }
@@ -93,9 +103,11 @@ function defineWrap(wrap: Wrapper = DefaultWrap) {
     return { 'flex-wrap': wrap }
 }
 
-function defineFlow(direction: Direction = DefaultDirection,
-                    wrap: Wrapper = DefaultWrap) {
-    return { 'flex-flow': `${direction} ${wrap}` }
+function defineFlow(options = { direction: DefaultDirection,
+				wrap: DefaultWrap }) {
+    let ddirection = defineDirection(options.direction)
+    let ddwrap     = defineWrap(options.wrap)
+    return { 'flex-flow': `${ddirection['flex-direction']} ${ddwrap['flex-wrap']}` }
 }
 
 function defineJustifyContent(position: Position = DefaultStart) {
@@ -106,14 +118,36 @@ function defineAlianItems(position: Position = DefaultStretch) {
     return { 'align-items': position }
 }
 
-function constFlex(direction: Direction = DefaultDirection,
-                          wrap: Wrapper = DefaultWrap,
-                          justifyContent: Position = DefaultStart,
-                          alignitems: Position = DefaultStretch) {
+function constFlex(options = { direction: DefaultDirection,
+			       wrap: DefaultWrap,
+			       justifyContent: DefaultStart,
+			       alignItems: DefaultStretch }) {
 
     return Object.assign({},
                          defineContainer(),
-                         defineFlow(direction, wrap),
-                         defineJustifyContent(justifyContent),
-                         defineAlianItems(alignitems))
+                         defineFlow(options.direction, options.wrap),
+                         defineJustifyContent(options.justifyContent),
+                         defineAlianItems(options.alignItems))
+}
+
+
+/** 
+ * Exports 
+ */
+
+export function flex() {
+    return constFlex()
+}
+
+export function flexCenter() {
+    return constFlex({ justifyContent: 'center',
+		       alignItems: 'center' })
+}
+
+export function flexCenterStart() {
+    return constFlex({ justifyContent: 'center' })
+}
+
+export function flexStart() {
+    return constFlex({ alignItems: 'center' })
 }

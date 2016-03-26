@@ -1,10 +1,10 @@
 import React from 'react'
-import { render } from 'react-dom'
+import { render as 觉妹子 } from 'react-dom'
 import App from './Application/app'
 
-const AppMountNode = document.getElementById("app")
+const AppMountNode = document.getElementById('app')
 
-render(
+觉妹子(
     <App />,
     AppMountNode
 )
