@@ -1,10 +1,13 @@
 import React from 'react'
-import { render as 觉妹子 } from 'react-dom'
-import App from './Application/app'
+import { render } from 'react-dom'
+import {} from './Style/reset.styl'
+import { SiteMap } from './Application/sitemap'
 
-const AppMountNode = document.getElementById('app')
+function 觉妹子(node) {
+    render(
+	SiteMap,
+	node
+    )
+}
 
-觉妹子(
-    <App />,
-    AppMountNode
-)
+觉妹子(document.getElementById('app'))

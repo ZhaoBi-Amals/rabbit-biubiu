@@ -1,13 +1,19 @@
 /* @flow */
 
 import React, { Component } from 'react'
-import { flexCenter } from './../Style/Layout/flex'
+
+const style = {
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0, 0, 0, 0.88)',
+    color: 'rgba(255, 255, 255, 0.56)'
+}
+
 
 export default class App extends Component {
     render() {
-	console.log(flexCenter())
 	return (
-	        <div>Hello World</div>
+	    <div style={style}>Hello World</div>
 	)
     }
 }

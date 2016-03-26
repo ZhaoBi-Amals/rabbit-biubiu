@@ -9,6 +9,8 @@
  * 2. css
  * css-loader
  * style-loader
+ * postcss-loader
+ * stylus-loader
  */
 
 const loaderBabel = {
@@ -20,9 +22,9 @@ const loaderBabel = {
 }
 
 const loaderStyle = {
-    test: /\.css$/,
+    test: /\.styl$/,
     exclude: [/node_modules/],
-    loader: 'style!css!'
+    loader: 'style!css!stylus!'
 }
 
 export const loaders = [
