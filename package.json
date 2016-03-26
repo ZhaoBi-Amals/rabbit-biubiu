@@ -7,7 +7,8 @@
     "start": "webpack-dev-server",
     "flow": "flow; test $? -eq 0 -o $? -eq 2",
     "dev-app": "./node_modules/.bin/electron electron-prebuild.js",
-    "dev-apk": "node ./node_modules/react-native-cli/index.js start"
+      "dev-apk": "node ./node_modules/react-native-cli/index.js start",
+      "server": "node ./Server/bin/www"
   },
   "author": "Yufi <yfhj1990@hotmail.com>",
   "license": "MIT",
@@ -31,10 +32,17 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
+    "debug": "^2.2.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "morgan": "^1.7.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-native": "^0.22.2",
     "react-router": "^2.0.1",
-    "redux": "^3.3.1"
+    "redux": "^3.3.1",
+    "serve-favicon": "^2.3.0"
   }
 }
