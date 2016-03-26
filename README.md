@@ -1,7 +1,7 @@
 # How Fast Is Fast ? （Just Play）
 
-[x] write once run anywhere
-[x] write less do  more
+* [x] ~write once run anywhere~
+* [x] ~write less do  more~
 
 
 这个项目的目的在于讨论如何更快更好的构建项目，主要是如下方面的讨论：
