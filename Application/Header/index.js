@@ -7,12 +7,13 @@
 
 import React, { Component } from 'react'
 import style                from './style'
+import Avatar               from 'Avatar/index'
 
 export default class Header extends Component {
     render() {
 	return (
 	    <header style={style}>
-	    兔子的私房菜
+	    <Avatar />	    
 	    </header>
 	)
     }

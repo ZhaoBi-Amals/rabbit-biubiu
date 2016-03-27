@@ -7,7 +7,8 @@
 
 import React, { Component } from 'react'
 import style                from './style'
-import Header               from 'AsideHeader/index'
+import Header               from 'Header/index'
+import Footer               from 'Footer/index'
 import Menu                 from 'Menu/index'
 
 export default class Aside extends Component {
@@ -16,6 +17,7 @@ export default class Aside extends Component {
 	    <aside style={style}>
 		<Header />
 		<Menu />
+		<Footer />
 	    </aside>
 	)
     }

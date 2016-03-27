@@ -9,5 +9,7 @@ import { fillMHeight as fh }   from 'Layout/size'
 import { flexItemGrow as fig } from 'Layout/flex'
 
 export default ms(
-    
+    {
+	'width': '50rem'
+    }
 )

@@ -7,19 +7,31 @@
 
 import React, { Component } from 'react'
 import style                from './style'
+import Button               from 'Component/Button/index'
+import Textarea             from 'Component/Textarea/index'
+import Breadcrumb           from 'Component/Breadcrumb/index'
 
 export default class Detail extends Component {
     render() {
 	return (
 	    <section style={style}>
-		<header>Snippet</header>
-		<select>
-		<option>javascript</option>
-		<option>css</option>
-		<option>coffee</option>
-		</select>
-		<textarea></textarea>
-		<button>save</button>
+	    <Breadcrumb />
+	    
+	    <header>h5 start</header>
+
+	    <section>快速创建一个html页面</section>
+
+	    {
+		/*
+		   <select>
+		   <option>javascript</option>
+		   <option>css</option>
+		   <option>coffee</option>
+		   </select>
+		   <Textarea>Something</Textarea>
+		 */
+	    }
+	    <Button>修改</Button>
 	    </section>
 	)
     }

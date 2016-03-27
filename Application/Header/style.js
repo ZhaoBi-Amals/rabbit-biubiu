@@ -13,9 +13,9 @@ import { flexItem    as fi,
 
 export default ms(
     fw(),
-    fi('3rem'),
-    flexc(),
-    fg(0.88),
-    bg(0.16),
-    shadow(1)
+    fi('10rem'),
+    flexc()
+    //fg(0.88),
+    //bg(0.16),
+    //shadow(1)
 )

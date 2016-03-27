@@ -5,7 +5,7 @@
  * @author Rabbit <yfhj1990@hotmail.com>
  */
 import React, { Component } from 'react'
-import style from './style'
+import style                from './style'
 
 export default class Main extends Component {
     render() {
