@@ -13,6 +13,8 @@
  * stylus-loader
  */
 
+import path from 'path'
+
 const loaderBabel = {
     test: /.jsx?$/,
     loader: 'babel',
@@ -32,6 +34,14 @@ export const loaders = [
     loaderStyle
 ]
 
+const roots = [
+    path.resolve('./Application'),
+    path.resolve('./Style'),
+    path.resolve('./Tool')
+]
+
+
 export const resolve = {
+    root: roots,
     extensions: ['', '.js', '.jsx']
 }

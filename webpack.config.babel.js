@@ -7,6 +7,9 @@ export default {
 	path: __dirname,
 	filename: 'bundle.js'
     },
+    node: {
+	console: true
+    },
     module: {
 	loaders: loaders
     },
