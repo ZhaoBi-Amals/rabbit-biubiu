@@ -4,7 +4,8 @@
  * 1. Handlebars
  */
 
-import HandlebarsPlugin from 'handlebars-webpack-plugin'
+import HandlebarsPlugin from 'handlebars-webpack-plugin';
+import webpack from 'webpack';
 
 const pluginHandlebars = new HandlebarsPlugin({
     entry: './index.hbs',
@@ -13,5 +14,5 @@ const pluginHandlebars = new HandlebarsPlugin({
 })
 
 export const plugins = [
-    pluginHandlebars
+    new webpack.HotModuleReplacementPlugin(),pluginHandlebars
 ]
