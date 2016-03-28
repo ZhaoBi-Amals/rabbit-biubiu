@@ -1,3 +1,7 @@
+// -*- coding: utf-8 -*-
+// -*- mode: Js -*-
+// @flow
+
 /**
  * Main Style.
  *
@@ -5,10 +9,10 @@
  * @author Rabbit <yfhj1990@hotmail.com>
  */
 import { mergeStyles as ms }    from 'mergeStyles'
+import { flexCenter  as flexc } from 'Layout/flex'
 import { bg }                   from 'Theme/color'
-import { flexCenter as flexc }  from 'Layout/flex'
 
 export default ms(
-    bg(0.88),
-    flexc()
+    flexc(),
+    bg(0.88)
 )

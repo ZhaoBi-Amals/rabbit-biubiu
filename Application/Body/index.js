@@ -1,3 +1,7 @@
+// -*- coding: utf-8 -*-
+// -*- mode: Js -*-
+// @flow
+
 /**
  * Body.
  *
@@ -13,7 +17,7 @@ export default class Body extends Component {
     render() {
 	return (
 	    <section style={style}>
-		<SnippetDetail />
+	      <SnippetDetail />
 	    </section>
 	)
     }
