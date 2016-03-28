@@ -12,7 +12,7 @@ export default ms(
     {
 	'width': '10rem',
 	'backgroundColor': 'rgba(255, 255, 255, 0.08)',
-	'font-size': '0.8rem',
+	'fontSize': '0.8rem',
 	'width': '100%',
 	'height': '5rem',
 	'color': 'rgba(255, 255, 255, 0.72)',
