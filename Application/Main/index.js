@@ -1,3 +1,7 @@
+// -*- coding: utf-8 -*-
+// -*- mode: Js -*-
+// @flow
+
 /**
  * Main.
  *
@@ -11,7 +15,7 @@ export default class Main extends Component {
     render() {
 	return (
 	    <section style={style}>
-	    {this.props.children}
+	      {this.props.children}
 	    </section>
 	)
     }

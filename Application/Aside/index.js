@@ -1,3 +1,7 @@
+// -*- coding: utf-8 -*-
+// -*- mode: Js -*-
+// @flow
+
 /**
  * Aside
  *
@@ -15,9 +19,9 @@ export default class Aside extends Component {
     render() {
 	return (
 	    <aside style={style}>
-		<Header />
-		<Menu />
-		<Footer />
+	      <Header />
+	      <Menu />
+	      <Footer />
 	    </aside>
 	)
     }
