@@ -17,6 +17,6 @@ export default ms(
     fig(),
     {
 	'padding': '3rem 6rem',
-	'box-sizing': 'border-box'
+	'boxSizing': 'border-box'
     }
 )
